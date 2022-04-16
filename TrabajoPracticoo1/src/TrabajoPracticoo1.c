@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "utn.h"
+#include "utn.h" //mi biblioetaca
 
 int main(void) {
 
@@ -24,7 +24,7 @@ int main(void) {
 	    float preciosLatamDebito;
 	    float precioAerolineasArgentinasCredito;
 	    float preciosLatamCredito;
-	    float precioAerolineasArgentinasBitCoin;
+	    float precioAerolineasArgentinasBitCoin;   //declaro las variables las cuales no son forzadas
 	    float precioLatamBitCoin;
 	    float precioUnitarioAerolineasArgentinas;
 	    float precioUnitarioLatam;
@@ -37,7 +37,7 @@ int main(void) {
 	    float preciosLatamDebitoForzado;
 	    float precioAerolineasArgentinasCreditoForzado;
 	    float preciosLatamCreditoForzado;
-	    float precioAerolineasArgentinasBitCoinForzado;
+	    float precioAerolineasArgentinasBitCoinForzado; //declaro las variables forzadas
 	    float precioLatamBitCoinForzado;
 	    float precioUnitarioAerolineasArgentinasForzado;
 	    float precioUnitarioLatamForzado;
@@ -45,15 +45,16 @@ int main(void) {
 
 
 	    char salida = 'n';
-	    do
+	    do //se cumple la condicion del while por lo tanto se procede con el bucle
+
 	        {
 	            printf("Eliga que quiere ingresar o saber acerca del viaje.\n 1 = kilometros. \n 2 = precios de los vuelos. \n 3 = Procesar Datos.\n 4 = Resultados.\n 5 = carga forzada.\n 6 = salir\n");
 	            scanf("%d", &opcionMenu);
-	            switch(opcionMenu)
+	            switch(opcionMenu) //hago el menu
 	               {
 	        case 1:
 	            system("cls");
-	            printf("ingrese los kilometros que desea viajar\n");
+	            printf("ingrese los kilometros que desea viajar\n"); //como primera opcion se ingresan los kilometros que se desea viajar
 	            scanf("%f",&kilometrosIngresados );
 	            while (kilometrosIngresados<100)
 	            {
@@ -66,7 +67,7 @@ int main(void) {
 	            system("cls");
 	            printf("ingrese el precio de los vuelos de Aerolineas Argentinas\n");
 	            scanf("%f", &precioAerolineasArgentinas );
-	            system ("cls");
+	            system ("cls"); 										//como segunda opcion se establecen los precios de ambas empresas de viajes
 	            printf("Ahora ingrese el precio de los vuelos de Latam\n");
 	            scanf("%f", &preciosLatam);
 	            break;
@@ -78,7 +79,7 @@ int main(void) {
 	            precioAerolineasArgentinasDebito = porcentajeDebito(precioAerolineasArgentinas,0.9);
 	            preciosLatamCredito = porcentajeCredito(preciosLatam,1.25);
 	            preciosLatamDebito = porcentajeDebito(preciosLatam,0.9);
-	            precioAerolineasArgentinasBitCoin = porcentajeBitCoin(precioAerolineasArgentinas,2.1683485589219995e-7);
+	            precioAerolineasArgentinasBitCoin = porcentajeBitCoin(precioAerolineasArgentinas,2.1683485589219995e-7); //en la tercera opcion se procesan los datos
 	            precioLatamBitCoin = porcentajeBitCoin(preciosLatam,2.1683485589219995e-7);
 	            precioUnitarioAerolineasArgentinas = precioUnitario(precioAerolineasArgentinas,kilometrosIngresados);
 	            precioUnitarioLatam = precioUnitario(preciosLatam,kilometrosIngresados);
@@ -92,7 +93,7 @@ int main(void) {
 	            printf("precio con tarjeta de debito = %.2f\n", precioAerolineasArgentinasDebito);
 	            printf("precio con tarjeta de credito = %.2f\n", precioAerolineasArgentinasCredito);
 	            printf("precio BitCoin = %f\n", precioAerolineasArgentinasBitCoin);
-	            printf("precio Unitario = %.2f\n\n", precioUnitarioAerolineasArgentinas);
+	            printf("precio Unitario = %.2f\n\n", precioUnitarioAerolineasArgentinas); //la cuarta opcion se muestran los datos de la 3ra opcion
 	            printf("precio de Latam = %.2f\n\n", preciosLatam);
 	            printf("precio con tarjeta de debito = %.2f\n", preciosLatamDebito);
 	            printf("precio con tarjeta de credito = %.2f\n", preciosLatamCredito);
@@ -109,7 +110,7 @@ int main(void) {
 	            preciosLatamDebitoForzado = porcentajeDebito(preciosLatamForzado,0.9);
 	            precioAerolineasArgentinasBitCoinForzado = porcentajeBitCoin(precioAerolineasArgentinasForzado,2.1683485589219995e-7);
 	            precioLatamBitCoinForzado = porcentajeBitCoin(preciosLatamForzado,2.1683485589219995e-7);
-	            precioUnitarioAerolineasArgentinasForzado = precioUnitario(precioAerolineasArgentinasForzado,kilometrosIngresadosForzado);
+	            precioUnitarioAerolineasArgentinasForzado = precioUnitario(precioAerolineasArgentinasForzado,kilometrosIngresadosForzado);//se procesan los datos forzados
 	            precioUnitarioLatamForzado = precioUnitario(preciosLatamForzado,kilometrosIngresadosForzado);
 	            diferenciaForzado = diferenciaDePrecios(precioAerolineasArgentinasForzado,preciosLatamForzado);
 
@@ -118,7 +119,7 @@ int main(void) {
 	            printf("precio con tarjeta de debito = %.2f\n", precioAerolineasArgentinasDebitoForzado);
 	            printf("precio con tarjeta de credito = %.2f\n", precioAerolineasArgentinasCreditoForzado);
 	            printf("precio BitCoin = %f\n", precioAerolineasArgentinasBitCoinForzado);
-	            printf("precio Unitario = %.2f\n\n", precioUnitarioAerolineasArgentinasForzado);
+	            printf("precio Unitario = %.2f\n\n", precioUnitarioAerolineasArgentinasForzado);  //se calculan los datos forzados
 	            printf("precio de Latam = %.2f\n\n", preciosLatamForzado);
 	            printf("precio con tarjeta de debito = %.2f\n", preciosLatamDebitoForzado);
 	            printf("precio con tarjeta de credito = %.2f\n", preciosLatamCreditoForzado);
@@ -128,19 +129,19 @@ int main(void) {
 	        break;
 
 	        case 6:
-	            printf("desea salir? s/n \n");
+	            printf("desea salir? n = no \n cualquiera otra tecla = si");   //por si el ususario desea salir del menu
 	            fflush(stdin);
 	            scanf("%c", &salida);
 	        break;
 
 	        default:
 	        	printf("Opcion Invalida, reingrese\n");
-	        	fflush(stdin);
+	        	fflush(stdin);									//si se ingresa un numero que no esta en el menu salta el "error"
 	        	scanf("%d", &opcionMenu);
 			break;
 	      }
 	    }
-	    	while(salida == 'n');
+	    	while(salida == 'n'); //la condicion que tiene el do para que el menu sea parte de un bucle
 
 	    	return 0;
 

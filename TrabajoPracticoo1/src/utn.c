@@ -3,6 +3,10 @@
  *
  *  Created on: 16 abr 2022
  *      Author: Alesio Avellaneda
+ *
+ *      esta biblioteca esta echa para ser reutilizable, por lo tanto tiene funciones sencillas
+ *
+ *
  */
 
      float porcentajeCredito (float A, float B)
